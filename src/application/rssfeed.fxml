@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="2000.0"
+	prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.RssFeedController">
+	<children>
+		<TabPane layoutY="28.0" prefHeight="200.0" prefWidth="200.0"
+			tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0"
+			AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+			AnchorPane.topAnchor="50.0">
+			<tabs>
+				<Tab fx:id="newsTab" text="News">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+							prefWidth="200.0">
+							<children>
+								<ListView fx:id="newsList" layoutX="66.0" layoutY="51.0"
+									onMouseClicked="#onMouseClickedNewsList" prefHeight="200.0"
+									prefWidth="200.0" AnchorPane.bottomAnchor="0.0"
+									AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+									AnchorPane.topAnchor="0.0" />
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+				<Tab fx:id="settingsTab" text="Settings">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+							prefWidth="200.0">
+							<children>
+								<ListView fx:id="urlList" layoutX="382.0" layoutY="39.0"
+									prefHeight="322.0" prefWidth="359.0" AnchorPane.bottomAnchor="50.0"
+									AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="50.0"
+									AnchorPane.topAnchor="50.0" />
+								<TextField fx:id="rssUrlTextField" layoutX="37.0"
+									layoutY="50.0" prefHeight="25.0" prefWidth="346.0" promptText="Add rss url" />
+								<Button fx:id="addButton" layoutX="37.0" layoutY="86.0"
+									mnemonicParsing="false" onAction="#onActionAddButton" text="Add" />
+								<Button fx:id="editButton" layoutX="37.0" layoutY="123.0"
+									mnemonicParsing="false" onAction="#onActionEditButton" text="Edit" />
+								<Button fx:id="removeButton" layoutX="37.0" layoutY="159.0"
+									mnemonicParsing="false" onAction="#onActionRemoveButton" text="Remove" />
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+			</tabs>
+		</TabPane>
+		<ToolBar prefHeight="50.0" prefWidth="200.0"
+			AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+			AnchorPane.topAnchor="0.0">
+			<items>
+				<Button mnemonicParsing="false" text="Button" />
+			</items>
+		</ToolBar>
+	</children>
+</AnchorPane>
